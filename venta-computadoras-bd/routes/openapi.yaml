@@ -1,0 +1,1228 @@
+openapi: 3.0.3
+info:
+  title: Contrato de Datos — Venta de Computadoras
+  version: 1.0.0
+  description: Especificación académica; no hay servidor HTTP implementado ni URL
+    de despliegue. Persistencia PostgreSQL. Ver endpoints.md para autorización, consultas
+    parametrizadas y errores.
+paths:
+  /api/categorias:
+    get:
+      summary: Listar categorias
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Categoria'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/marcas:
+    get:
+      summary: Listar marcas
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Marca'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/productos:
+    get:
+      summary: Listar productos
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      - $ref: '#/components/parameters/Activo'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Producto'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Crear productos
+      parameters: []
+      responses:
+        '201':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductoCrear'
+  /api/clientes:
+    get:
+      summary: Listar clientes
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      - $ref: '#/components/parameters/Activo'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Cliente'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Crear clientes
+      parameters: []
+      responses:
+        '201':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClienteCrear'
+  /api/proveedores:
+    get:
+      summary: Listar proveedores
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      - $ref: '#/components/parameters/Activo'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Proveedor'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Crear proveedor
+      parameters: []
+      responses:
+        '201':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proveedor'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProveedorCrear'
+  /api/ventas:
+    get:
+      summary: Listar ventas
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/VentaResumen'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Registrar venta de forma atómica y descontar stock
+      parameters: []
+      responses:
+        '201':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VentaCreada'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VentaCrear'
+  /api/reportes/stock-bajo:
+    get:
+      summary: Listar reportes/stock-bajo
+      parameters:
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/StockBajo'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/productos/{id}:
+    get:
+      summary: Consultar por ID
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      summary: Actualizar campos permitidos sin cambiar stock ni documento
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductoActualizar'
+    delete:
+      summary: Dar de baja lógica
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '204':
+          description: Operación exitosa
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/clientes/{id}:
+    get:
+      summary: Consultar por ID
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      summary: Actualizar campos permitidos sin cambiar stock ni documento
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Violación de una restricción de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClienteActualizar'
+    delete:
+      summary: Dar de baja lógica
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '204':
+          description: Operación exitosa
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/productos/{id}/proveedores:
+    get:
+      summary: Listar proveedores activos y costo referencial del producto
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      - $ref: '#/components/parameters/Limit'
+      - $ref: '#/components/parameters/Offset'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Suministro'
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                required:
+                - items
+                - limit
+                - offset
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/ventas/{id}:
+    get:
+      summary: Consultar venta con líneas y precios históricos
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VentaDetalle'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/ventas/{id}/anulacion:
+    post:
+      summary: Anular venta completa y reponer stock una sola vez
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Operación exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VentaAnulada'
+        '400':
+          description: Entrada inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Recurso no encontrado o cliente no disponible
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflicto de estado, stock o unicidad
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Anulacion'
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema: &id013
+        type: integer
+        minimum: 1
+        maximum: 2147483647
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+    Offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+    Activo:
+      name: activo
+      in: query
+      schema:
+        type: boolean
+        default: true
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      properties:
+        codigo:
+          type: string
+        mensaje:
+          type: string
+      required:
+      - codigo
+      - mensaje
+    ProductoCrear:
+      type: object
+      additionalProperties: false
+      properties:
+        sku: &id001
+          type: string
+          maxLength: 30
+          minLength: 1
+        nombre: &id002
+          type: string
+          maxLength: 150
+          minLength: 1
+        categoria_id: &id003
+          type: integer
+          minimum: 1
+          maximum: 2147483647
+        marca_id: &id004
+          type: integer
+          minimum: 1
+          maximum: 2147483647
+        procesador: &id005
+          type: string
+          maxLength: 100
+          minLength: 1
+        ram_gb: &id006
+          type: integer
+          minimum: 1
+          maximum: 1024
+        almacenamiento_gb: &id007
+          type: integer
+          minimum: 1
+          maximum: 100000
+        tipo_almacenamiento: &id008
+          type: string
+          enum:
+          - SSD
+          - HDD
+        tarjeta_grafica: &id009
+          type: string
+          maxLength: 100
+          nullable: true
+        precio_venta: &id010
+          type: string
+          pattern: ^[0-9]+\.[0-9]{2}$
+          example: '3200.00'
+          description: Precio positivo; validar > 0 y máximo 9999999999.99 en el backend.
+        stock: &id014
+          type: integer
+          minimum: 0
+          maximum: 1000000000
+          default: 0
+        stock_minimo: &id011
+          type: integer
+          minimum: 0
+          maximum: 1000000000
+          default: 2
+        activo: &id012
+          type: boolean
+          default: true
+      required:
+      - sku
+      - nombre
+      - categoria_id
+      - marca_id
+      - procesador
+      - ram_gb
+      - almacenamiento_gb
+      - tipo_almacenamiento
+      - precio_venta
+    ProductoActualizar:
+      type: object
+      additionalProperties: false
+      properties:
+        sku: *id001
+        nombre: *id002
+        categoria_id: *id003
+        marca_id: *id004
+        procesador: *id005
+        ram_gb: *id006
+        almacenamiento_gb: *id007
+        tipo_almacenamiento: *id008
+        tarjeta_grafica: *id009
+        precio_venta: *id010
+        stock_minimo: *id011
+        activo: *id012
+      minProperties: 1
+    Producto:
+      type: object
+      additionalProperties: true
+      properties:
+        producto_id: *id013
+        sku: *id001
+        nombre: *id002
+        categoria_id: *id003
+        marca_id: *id004
+        procesador: *id005
+        ram_gb: *id006
+        almacenamiento_gb: *id007
+        tipo_almacenamiento: *id008
+        tarjeta_grafica: *id009
+        precio_venta: *id010
+        stock: *id014
+        stock_minimo: *id011
+        activo: *id012
+      required:
+      - producto_id
+      - sku
+      - nombre
+      - categoria_id
+      - marca_id
+      - procesador
+      - ram_gb
+      - almacenamiento_gb
+      - tipo_almacenamiento
+      - precio_venta
+      - stock
+      - stock_minimo
+      - activo
+    ClienteCrear:
+      type: object
+      additionalProperties: false
+      properties:
+        tipo_documento: &id019
+          type: string
+          enum:
+          - DNI
+          - RUC
+          - CE
+        numero_documento: &id020
+          type: string
+          maxLength: 12
+          minLength: 8
+          description: 'DNI: 8 dígitos; RUC: 11 dígitos; CE: 9 a 12 caracteres alfanuméricos.'
+        nombre_razon_social: &id015
+          type: string
+          maxLength: 150
+          minLength: 1
+        correo: &id016
+          type: string
+          maxLength: 150
+          nullable: true
+        telefono: &id017
+          type: string
+          maxLength: 20
+          nullable: true
+        direccion: &id018
+          type: string
+          maxLength: 200
+          nullable: true
+      required:
+      - tipo_documento
+      - numero_documento
+      - nombre_razon_social
+    ClienteActualizar:
+      type: object
+      additionalProperties: false
+      properties:
+        nombre_razon_social: *id015
+        correo: *id016
+        telefono: *id017
+        direccion: *id018
+        activo:
+          type: boolean
+      minProperties: 1
+    Cliente:
+      type: object
+      additionalProperties: true
+      properties:
+        cliente_id: *id013
+        tipo_documento: *id019
+        numero_documento: *id020
+        nombre_razon_social: *id015
+        correo: *id016
+        telefono: *id017
+        direccion: *id018
+        activo:
+          type: boolean
+      required:
+      - cliente_id
+      - tipo_documento
+      - numero_documento
+      - nombre_razon_social
+      - activo
+    ProveedorCrear:
+      type: object
+      additionalProperties: false
+      properties:
+        ruc: &id021
+          type: string
+          pattern: ^[0-9]{11}$
+        razon_social: &id022
+          type: string
+          maxLength: 150
+          minLength: 1
+        correo: *id016
+        telefono: *id017
+        direccion: *id018
+      required:
+      - ruc
+      - razon_social
+    Proveedor:
+      type: object
+      additionalProperties: true
+      properties:
+        proveedor_id: *id013
+        ruc: *id021
+        razon_social: *id022
+        correo: *id016
+        telefono: *id017
+        direccion: *id018
+        activo:
+          type: boolean
+      required:
+      - proveedor_id
+      - ruc
+      - razon_social
+      - activo
+    Categoria:
+      type: object
+      additionalProperties: true
+      properties:
+        categoria_id: *id013
+        nombre:
+          type: string
+          maxLength: 60
+        descripcion:
+          type: string
+          maxLength: 200
+          nullable: true
+      required:
+      - categoria_id
+      - nombre
+    Marca:
+      type: object
+      additionalProperties: true
+      properties:
+        marca_id: *id013
+        nombre:
+          type: string
+          maxLength: 60
+      required:
+      - marca_id
+      - nombre
+    Suministro:
+      type: object
+      additionalProperties: true
+      properties:
+        proveedor_id: *id013
+        razon_social:
+          type: string
+          maxLength: 150
+        costo_referencial: &id024
+          type: string
+          pattern: ^[0-9]+\.[0-9]{2}$
+          example: '3200.00'
+          description: Importe decimal en PEN; precio final de demostración.
+      required:
+      - proveedor_id
+      - razon_social
+      - costo_referencial
+    DetalleEntrada:
+      type: object
+      additionalProperties: false
+      properties:
+        producto_id: *id013
+        cantidad:
+          type: integer
+          minimum: 1
+          maximum: 1000
+      required:
+      - producto_id
+      - cantidad
+    VentaCrear:
+      type: object
+      additionalProperties: false
+      properties:
+        cliente_id: *id013
+        metodo_pago: &id023
+          type: string
+          enum:
+          - EFECTIVO
+          - TARJETA
+          - TRANSFERENCIA
+        detalles:
+          type: array
+          minItems: 1
+          maxItems: 100
+          description: producto_id debe ser distinto en cada línea.
+          items:
+            $ref: '#/components/schemas/DetalleEntrada'
+      required:
+      - cliente_id
+      - metodo_pago
+      - detalles
+    VentaResumen:
+      type: object
+      additionalProperties: true
+      properties:
+        venta_id: *id013
+        cliente_id: *id013
+        fecha:
+          type: string
+          format: date-time
+        estado:
+          type: string
+          enum:
+          - CONFIRMADA
+          - ANULADA
+        metodo_pago: *id023
+        moneda:
+          type: string
+          enum:
+          - PEN
+        total: *id024
+      required:
+      - venta_id
+      - cliente_id
+      - fecha
+      - estado
+      - metodo_pago
+      - moneda
+      - total
+    DetalleSalida:
+      type: object
+      additionalProperties: true
+      properties:
+        producto_id: *id013
+        cantidad:
+          type: integer
+        precio_unitario: *id024
+        subtotal: *id024
+        sku:
+          type: string
+        nombre:
+          type: string
+      required:
+      - producto_id
+      - cantidad
+      - precio_unitario
+      - subtotal
+    VentaDetalle:
+      allOf:
+      - $ref: '#/components/schemas/VentaResumen'
+      - type: object
+        properties:
+          nombre_razon_social:
+            type: string
+          detalles:
+            type: array
+            items:
+              $ref: '#/components/schemas/DetalleSalida'
+        required:
+        - detalles
+    VentaCreada:
+      type: object
+      additionalProperties: true
+      properties:
+        venta_id: *id013
+        estado:
+          type: string
+          enum:
+          - CONFIRMADA
+        moneda:
+          type: string
+          enum:
+          - PEN
+        total: *id024
+      required:
+      - venta_id
+      - estado
+      - moneda
+      - total
+    Anulacion:
+      type: object
+      additionalProperties: false
+      properties:
+        motivo:
+          type: string
+          maxLength: 250
+          minLength: 1
+      required:
+      - motivo
+    VentaAnulada:
+      type: object
+      additionalProperties: true
+      properties:
+        venta_id: *id013
+        estado:
+          type: string
+          enum:
+          - ANULADA
+      required:
+      - venta_id
+      - estado
+    StockBajo:
+      type: object
+      additionalProperties: true
+      properties:
+        producto_id: *id013
+        sku:
+          type: string
+        nombre:
+          type: string
+        stock:
+          type: integer
+        stock_minimo:
+          type: integer
+      required:
+      - producto_id
+      - sku
+      - nombre
+      - stock
+      - stock_minimo

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1600" viewBox="0 0 1760 1600">
+<rect width="1760" height="1600" fill="#F4F7FC"/>
+<rect x="0" y="0" width="1760" height="125" rx="0" fill="#12233F"/>
+<text x="55" y="40" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">MODELO RELACIONAL</text>
+<text x="55" y="88" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#CAD6EB">Esquema tienda  •  8 tablas / 50 columnas  •  PK: primaria   FK: foránea   UQ: única   G: generada</text>
+<polyline points="490,235 625,235" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="497" y="200" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="505" y="214" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="490,465 560,465 560,296 625,296" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="497" y="432" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="505" y="446" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="1115,410 1160,410 1160,559 1210,559" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1117" y="375" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1125" y="389" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="1470,412 1470,500" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1472" y="442" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1480" y="456" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="875,700 875,790 1200,790 1200,1068 1210,1068" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="892" y="757" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="900" y="771" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="490,1030 625,1030" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="497" y="993" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="505" y="1007" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<polyline points="1115,1140 1210,1140" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1117" y="1101" width="72.59375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1125" y="1115" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1 → N</text>
+<rect x="50" y="180" width="440" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="50" y="180" width="440" height="51" rx="9" fill="#2168D8"/>
+<text x="70" y="206" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">CATEGORIAS</text>
+<text x="68" y="249" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  categoria_id</text>
+<text x="68" y="281" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ  nombre</text>
+<text x="68" y="313" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      descripcion</text>
+<rect x="50" y="410" width="440" height="136" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="50" y="410" width="440" height="51" rx="9" fill="#2168D8"/>
+<text x="70" y="436" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">MARCAS</text>
+<text x="68" y="479" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  marca_id</text>
+<text x="68" y="511" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ  nombre</text>
+<rect x="625" y="180" width="490" height="520" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="625" y="180" width="490" height="51" rx="9" fill="#2168D8"/>
+<text x="645" y="206" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PRODUCTOS</text>
+<text x="643" y="249" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  producto_id</text>
+<text x="643" y="281" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ  sku</text>
+<text x="643" y="313" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      nombre</text>
+<text x="643" y="345" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">FK  categoria_id</text>
+<text x="643" y="377" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">FK  marca_id</text>
+<text x="643" y="409" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      procesador</text>
+<text x="643" y="441" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      ram_gb</text>
+<text x="643" y="473" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      almacenamiento_gb</text>
+<text x="643" y="505" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      tipo_almacenamiento</text>
+<text x="643" y="537" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      tarjeta_grafica</text>
+<text x="643" y="569" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      precio_venta</text>
+<text x="643" y="601" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      stock</text>
+<text x="643" y="633" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      stock_minimo</text>
+<text x="643" y="665" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      activo</text>
+<rect x="1210" y="180" width="500" height="232" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="1210" y="180" width="500" height="51" rx="9" fill="#087F8C"/>
+<text x="1230" y="206" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PROVEEDORES</text>
+<text x="1228" y="249" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  proveedor_id</text>
+<text x="1228" y="281" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ  ruc</text>
+<text x="1228" y="313" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      razon_social</text>
+<text x="1228" y="345" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      correo / telefono / direccion</text>
+<text x="1228" y="377" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      activo</text>
+<rect x="1210" y="500" width="500" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="1210" y="500" width="500" height="51" rx="9" fill="#087F8C"/>
+<text x="1230" y="526" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PRODUCTO_PROVEEDOR</text>
+<text x="1228" y="569" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK/FK  producto_id</text>
+<text x="1228" y="601" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK/FK  proveedor_id</text>
+<text x="1228" y="633" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">           costo_referencial</text>
+<rect x="50" y="925" width="440" height="328" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="50" y="925" width="440" height="51" rx="9" fill="#087F8C"/>
+<text x="70" y="951" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">CLIENTES</text>
+<text x="68" y="994" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  cliente_id</text>
+<text x="68" y="1026" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ* tipo_documento</text>
+<text x="68" y="1058" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">UQ* numero_documento</text>
+<text x="68" y="1090" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      nombre_razon_social</text>
+<text x="68" y="1122" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      correo</text>
+<text x="68" y="1154" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      telefono</text>
+<text x="68" y="1186" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      direccion</text>
+<text x="68" y="1218" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      activo</text>
+<rect x="625" y="925" width="490" height="328" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="625" y="925" width="490" height="51" rx="9" fill="#2168D8"/>
+<text x="645" y="951" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">VENTAS</text>
+<text x="643" y="994" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK  venta_id</text>
+<text x="643" y="1026" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">FK  cliente_id</text>
+<text x="643" y="1058" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      fecha</text>
+<text x="643" y="1090" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      estado</text>
+<text x="643" y="1122" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      metodo_pago</text>
+<text x="643" y="1154" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      moneda</text>
+<text x="643" y="1186" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      fecha_anulacion</text>
+<text x="643" y="1218" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">      motivo_anulacion</text>
+<rect x="1210" y="1000" width="500" height="232" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="1210" y="1000" width="500" height="51" rx="9" fill="#2168D8"/>
+<text x="1230" y="1026" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">DETALLE_VENTA</text>
+<text x="1228" y="1069" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK/FK  venta_id</text>
+<text x="1228" y="1101" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">PK/FK  producto_id</text>
+<text x="1228" y="1133" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">           cantidad</text>
+<text x="1228" y="1165" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">           precio_unitario</text>
+<text x="1228" y="1197" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">G         subtotal</text>
+<text x="50" y="1370" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#253650">FK → destino: categorías y marcas → productos; productos y proveedores → tabla puente.</text>
+<text x="50" y="1408" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#253650">Clientes → ventas; ventas y productos → detalle. Todas las FK usan ON DELETE RESTRICT.</text>
+<text x="50" y="1446" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#62728B">UQ* = UNIQUE(tipo_documento, numero_documento). Las dos PK dobles son compuestas.</text>
+<text x="50" y="1484" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#62728B">Subtotal = cantidad × precio_unitario. El total de venta se deriva en v_ventas_resumen.</text>
+<text x="50" y="1540" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#62728B">Un producto representa una configuración de computadora; sus existencias se controlan por unidades.</text>
+</svg>

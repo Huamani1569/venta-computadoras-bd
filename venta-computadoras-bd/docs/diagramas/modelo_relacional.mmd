@@ -1,0 +1,74 @@
+erDiagram
+    CATEGORIAS ||--o{ PRODUCTOS : clasifica
+    MARCAS ||--o{ PRODUCTOS : identifica
+    PRODUCTOS ||--o{ PRODUCTO_PROVEEDOR : tiene
+    PROVEEDORES ||--o{ PRODUCTO_PROVEEDOR : suministra
+    CLIENTES ||--o{ VENTAS : realiza
+    VENTAS ||--|{ DETALLE_VENTA : contiene
+    PRODUCTOS ||--o{ DETALLE_VENTA : aparece
+    CATEGORIAS {
+        integer categoria_id PK
+        varchar nombre
+        varchar descripcion
+    }
+    MARCAS {
+        integer marca_id PK
+        varchar nombre
+    }
+    PROVEEDORES {
+        integer proveedor_id PK
+        varchar ruc
+        varchar razon_social
+        varchar correo
+        varchar telefono
+        varchar direccion
+        boolean activo
+    }
+    PRODUCTOS {
+        integer producto_id PK
+        varchar sku
+        varchar nombre
+        integer categoria_id FK
+        integer marca_id FK
+        varchar procesador
+        smallint ram_gb
+        integer almacenamiento_gb
+        varchar tipo_almacenamiento
+        varchar tarjeta_grafica
+        numeric precio_venta
+        integer stock
+        integer stock_minimo
+        boolean activo
+    }
+    PRODUCTO_PROVEEDOR {
+        integer producto_id PK,FK
+        integer proveedor_id PK,FK
+        numeric costo_referencial
+    }
+    CLIENTES {
+        integer cliente_id PK
+        varchar tipo_documento
+        varchar numero_documento
+        varchar nombre_razon_social
+        varchar correo
+        varchar telefono
+        varchar direccion
+        boolean activo
+    }
+    VENTAS {
+        integer venta_id PK
+        integer cliente_id FK
+        timestamptz fecha
+        varchar estado
+        varchar metodo_pago
+        char moneda
+        timestamptz fecha_anulacion
+        varchar motivo_anulacion
+    }
+    DETALLE_VENTA {
+        integer venta_id PK,FK
+        integer producto_id PK,FK
+        integer cantidad
+        numeric precio_unitario
+        numeric subtotal
+    }

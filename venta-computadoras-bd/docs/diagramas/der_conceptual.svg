@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1190" viewBox="0 0 1600 1190">
+<rect width="1600" height="1190" fill="#F4F7FC"/>
+<rect x="0" y="0" width="1600" height="125" rx="0" fill="#12233F"/>
+<text x="55" y="40" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">DIAGRAMA ENTIDAD–RELACIÓN</text>
+<text x="55" y="88" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#CAD6EB">Venta de Computadoras  •  Diseño conceptual  •  Participaciones mínimas y máximas</text>
+<polyline points="245,341 245,440 680,440 680,500" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="247" y="391" width="114.15625" height="29" rx="5" fill="#F4F7FC"/>
+<text x="255" y="405" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1  clasifica</text>
+<rect x="567" y="452" width="58.34375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="575" y="466" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N</text>
+<polyline points="800,341 800,500" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="807" y="394" width="34.8125" height="29" rx="5" fill="#F4F7FC"/>
+<text x="815" y="408" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1</text>
+<rect x="807" y="454" width="58.34375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="815" y="468" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N</text>
+<polyline points="1325,341 1325,590 1005,590" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1142" y="557" width="158.515625" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1150" y="571" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N  suministra</text>
+<rect x="1002" y="601" width="58.34375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1010" y="615" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N</text>
+<polyline points="1005,640 1370,640 1370,840" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1092" y="607" width="120.5" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1100" y="621" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1  participa</text>
+<rect x="1372" y="781" width="58.34375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1380" y="795" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N</text>
+<polyline points="460,925 595,925" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="467" y="888" width="34.8125" height="29" rx="5" fill="#F4F7FC"/>
+<text x="475" y="902" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1</text>
+<rect x="512" y="937" width="58.34375" height="29" rx="5" fill="#F4F7FC"/>
+<text x="520" y="951" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">0..N</text>
+<polyline points="1005,925 1130,925" fill="none" stroke="#7185A4" stroke-width="3"/>
+<rect x="1008" y="888" width="34.8125" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1016" y="902" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1</text>
+<rect x="1033" y="937" width="78.0625" height="29" rx="5" fill="#F4F7FC"/>
+<text x="1041" y="951" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#385272">1..100</text>
+<rect x="55" y="205" width="405" height="136" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="55" y="205" width="405" height="51" rx="9" fill="#2168D8"/>
+<text x="75" y="231" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">CATEGORÍA</text>
+<text x="73" y="274" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">categoria_id</text>
+<text x="73" y="306" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">nombre, descripción</text>
+<rect x="595" y="205" width="410" height="136" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="595" y="205" width="410" height="51" rx="9" fill="#2168D8"/>
+<text x="615" y="231" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">MARCA</text>
+<text x="613" y="274" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">marca_id</text>
+<text x="613" y="306" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">nombre</text>
+<rect x="1130" y="205" width="410" height="136" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="1130" y="205" width="410" height="51" rx="9" fill="#087F8C"/>
+<text x="1150" y="231" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PROVEEDOR</text>
+<text x="1148" y="274" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">proveedor_id, RUC</text>
+<text x="1148" y="306" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">razón social, contacto</text>
+<rect x="595" y="500" width="410" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="595" y="500" width="410" height="51" rx="9" fill="#2168D8"/>
+<text x="615" y="526" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">PRODUCTO / COMPUTADORA</text>
+<text x="613" y="569" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">producto_id, SKU</text>
+<text x="613" y="601" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">especificaciones técnicas</text>
+<text x="613" y="633" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">precio actual, stock, activo</text>
+<rect x="55" y="840" width="405" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="55" y="840" width="405" height="51" rx="9" fill="#087F8C"/>
+<text x="75" y="866" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">CLIENTE</text>
+<text x="73" y="909" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">cliente_id, documento</text>
+<text x="73" y="941" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">nombre / razón social</text>
+<text x="73" y="973" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">contacto, activo</text>
+<rect x="595" y="840" width="410" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="595" y="840" width="410" height="51" rx="9" fill="#2168D8"/>
+<text x="615" y="866" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">VENTA</text>
+<text x="613" y="909" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">venta_id, fecha, estado</text>
+<text x="613" y="941" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">cliente, pago, moneda</text>
+<text x="613" y="973" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">fecha / motivo de anulación</text>
+<rect x="1130" y="840" width="410" height="168" rx="12" fill="#FFFFFF" stroke="#CFD9E9" stroke-width="2"/>
+<rect x="1130" y="840" width="410" height="51" rx="9" fill="#2168D8"/>
+<text x="1150" y="866" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">DETALLE DE VENTA</text>
+<text x="1148" y="909" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">venta_id + producto_id</text>
+<text x="1148" y="941" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">cantidad, precio histórico</text>
+<text x="1148" y="973" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#253650">subtotal calculado</text>
+<text x="55" y="1110" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#253650">1 = uno  •  0..N = cero o muchos  •  1..100 = una a cien líneas por venta</text>
+<text x="55" y="1146" dominant-baseline="central" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#62728B">Suministra es N:M; el modelo relacional la resuelve con PRODUCTO_PROVEEDOR.</text>
+</svg>

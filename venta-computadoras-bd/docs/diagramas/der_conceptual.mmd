@@ -1,0 +1,7 @@
+erDiagram
+    CATEGORIA ||--o{ PRODUCTO : clasifica
+    MARCA ||--o{ PRODUCTO : identifica
+    PROVEEDOR }o--o{ PRODUCTO : suministra
+    CLIENTE ||--o{ VENTA : realiza
+    VENTA ||--|{ DETALLE_VENTA : contiene
+    PRODUCTO ||--o{ DETALLE_VENTA : aparece
